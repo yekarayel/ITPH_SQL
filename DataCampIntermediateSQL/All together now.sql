@@ -30,7 +30,12 @@ WHERE release_year > 1990
 GROUP BY release_year;
 
 -- 3 -----------------------
-
+SELECT release_year, AVG(budget) AS avg_budget, AVG(gross) AS avg_gross
+FROM films
+WHERE release_year > 1990
+GROUP BY release_year
+-- Modify the query to see only years with an avg_budget of more than 60 million
+HAVING AVG(budget) > 60000000;
 
 -- 4 -----------------------
 
