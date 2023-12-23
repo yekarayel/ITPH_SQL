@@ -22,7 +22,12 @@ GROUP BY release_year
 HAVING release_year > 1990 ;
 
 -- 2 -----------------------
-
+-- Modify the query to also list the average budget and average gross
+SELECT release_year,
+    AVG(budget) AS avg_budget, AVG(gross) AS avg_gross
+FROM films
+WHERE release_year > 1990
+GROUP BY release_year;
 
 -- 3 -----------------------
 
