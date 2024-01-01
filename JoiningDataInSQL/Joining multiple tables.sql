@@ -12,3 +12,10 @@ Select name, year and fertility_rate.
 Select name, and using table aliases, select year and unemployment_rate from economies.
 */
 
+-- 1 ------------------------------
+-- Select relevant fields
+SELECT name, year, fertility_rate
+FROM countries AS c
+-- Inner join countries and populations, aliased, on code
+INNER JOIN populations AS p
+ON c.code = p.country_code;
