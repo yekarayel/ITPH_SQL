@@ -8,7 +8,9 @@ You will use AVG() in combination with a LEFT JOIN to determine the average gros
 Instructions
 1-  * Complete the LEFT JOIN with the countries table on the left and the economies table on the right on the code field.
     * Filter the records from the year 2010.
-2-
+2-  * To calculate per capita GDP per region, begin by grouping by region.
+    * After your GROUP BY, choose region in your SELECT statement, followed by average GDP per capita using the AVG() function, 
+with AS avg_gdp as your alias.
 3-
 
 
@@ -21,4 +23,15 @@ LEFT JOIN economies AS e
 USING(code)
 -- Filter for the year 2010
 WHERE year = 2010;
+
+-- 2 ------------------------------
+-- Select region, and average gdp_percapita as avg_gdp
+SELECT region,
+    AVG(gdp_percapita) AS avg_gdp
+FROM countries AS c
+LEFT JOIN economies AS e
+USING(code)
+WHERE year = 2010
+-- Group by region
+GROUP BY region;
 
