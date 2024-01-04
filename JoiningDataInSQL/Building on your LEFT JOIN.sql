@@ -11,7 +11,8 @@ Instructions
 2-  * To calculate per capita GDP per region, begin by grouping by region.
     * After your GROUP BY, choose region in your SELECT statement, followed by average GDP per capita using the AVG() function, 
 with AS avg_gdp as your alias.
-3-
+3-  * Order the result set by the average GDP per capita from highest to lowest.
+    * Return only the first 10 records in your result.
 
 
 */
@@ -34,4 +35,16 @@ USING(code)
 WHERE year = 2010
 -- Group by region
 GROUP BY region;
+
+-- 3 ------------------------------
+SELECT region, AVG(gdp_percapita) AS avg_gdp
+FROM countries AS c
+LEFT JOIN economies AS e
+USING(code)
+WHERE year = 2010
+GROUP BY region
+-- Order by descending avg_gdp
+ORDER BY avg_gdp DESC
+-- Return only first 10 records
+LIMIT 10;
 
