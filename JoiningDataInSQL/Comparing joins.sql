@@ -18,3 +18,32 @@ JoiningDataInSQL/full_join2.png
 3-  Repeat the same query again, this time performing an inner join of countries with currencies.
     Have a look at what has changed in the output by comparing it to the full join and left join results!  */
 
+-- 1 ------------------------------
+SELECT name AS country, code, region, basic_unit
+FROM countries
+-- Join to currencies
+FULL JOIN currencies 
+USING (code)
+-- Where region is North America or name is null
+WHERE region = 'North America' OR name IS NULL
+ORDER BY region;
+
+-- 2 ------------------------------
+SELECT name AS country, code, region, basic_unit
+FROM countries
+-- Join to currencies
+LEFT JOIN currencies
+USING (code)
+WHERE region = 'North America' 
+	OR name IS NULL
+ORDER BY region;
+
+-- 3 ------------------------------
+SELECT name AS country, code, region, basic_unit
+FROM countries
+-- Join to currencies
+INNER JOIN currencies
+USING (code)
+WHERE region = 'North America' 
+	OR name IS NULL
+ORDER BY region;
