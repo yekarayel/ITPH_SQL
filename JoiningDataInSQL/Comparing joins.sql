@@ -8,3 +8,13 @@ Recall the workings of a full join with the diagram below! */
 JoiningDataInSQL/full_join2.png
 
 /* You'll then complete a similar left join and conclude with an inner join, observing the results you see along the way.  */
+
+/* Instructions
+1-  Perform a full join with countries (left) and currencies (right).
+    Filter for the North America region or NULL country names.
+
+2-  Repeat the same query as before, turning your full join into a left join with the currencies table.
+    Have a look at what has changed in the output by comparing it to the full join result.
+3-  Repeat the same query again, this time performing an inner join of countries with currencies.
+    Have a look at what has changed in the output by comparing it to the full join and left join results!  */
+
