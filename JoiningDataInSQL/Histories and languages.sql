@@ -13,7 +13,10 @@ In this exercise, we will explore how INNER JOIN and CROSS JOIN can help us answ
 Instructions
 
 1- Complete the code to perform an INNER JOIN of countries AS c with languages AS l using the code field to obtain the languages 
-currently spoken in the two countries.  */
+currently spoken in the two countries.  
+2-  * Change your INNER JOIN to a different kind of join to look at possible combinations of languages that could have been spoken in 
+      the two countries given their history.
+    * Observe the differences in output for both joins.	*/
 
 
 -- 1 --------------------------------
@@ -25,4 +28,4 @@ ON c.code = l.code
 WHERE c.code IN ('PAK','IND')
 	AND l.code in ('PAK','IND');
 
-
+-- 2 --------------------------------
