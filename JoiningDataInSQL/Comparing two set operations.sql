@@ -12,3 +12,16 @@ excluding duplicates.
 
 2- Amend the query to return all combinations (including duplicates) of country code and year in the economies or the populations tables. */
 
+
+-- 1 --------------------------------
+-- Query that determines all pairs of code and year from economies and populations, without duplicates
+SELECT code, year
+FROM economies
+UNION
+SELECT country_code, year
+FROM populations
+ORDER BY code, year;
+
+
+-- 2 --------------------------------
+
