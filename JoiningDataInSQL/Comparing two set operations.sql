@@ -24,4 +24,12 @@ ORDER BY code, year;
 
 
 -- 2 --------------------------------
+SELECT code, year
+FROM economies
+-- Set theory clause
+UNION ALL
+SELECT country_code, year
+FROM populations
+ORDER BY code, year;
 
+--
