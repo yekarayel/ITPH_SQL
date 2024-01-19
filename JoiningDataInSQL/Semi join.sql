@@ -12,3 +12,10 @@ Instructions
 
 1- Select country code as a single field from the countries table, filtering for countries in the 'Middle East' region.  */
 
+
+-- 1 -----------------------------------
+-- Select country code for countries in the Middle East
+SELECT code
+FROM countries
+WHERE region = ('Middle East');
+
