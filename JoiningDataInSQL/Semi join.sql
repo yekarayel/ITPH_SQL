@@ -10,7 +10,10 @@ the countries table, and then leveraging a WHERE clause to filter the languages 
 
 Instructions
 
-1- Select country code as a single field from the countries table, filtering for countries in the 'Middle East' region.  */
+1- Select country code as a single field from the countries table, filtering for countries in the 'Middle East' region.  
+
+2- * Write a second query to SELECT the name of each unique language appearing in the languages table; do not use column aliases here.
+   * Order the result set by name in ascending order.*/
 
 
 -- 1 -----------------------------------
