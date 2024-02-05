@@ -8,3 +8,15 @@ FROM populations
 WHERE life_expectancy > 1.15 * avg_life_expectancy
   AND year = 2015;
 In the first step, you'll write a query to calculate a value for avg_life_expectancy. In the second step, you will nest this calculation into another query.
+
+Instructions 
+
+1-  * Begin by calculating the average life expectancy from the populations table.
+    * Filter your answer to use records from 2015 only.  */
+
+
+-- Select average life_expectancy from the populations table
+SELECT AVG(life_expectancy)
+FROM populations
+-- Filter for the year 2015
+WHERE year = 2015;
